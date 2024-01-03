@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "stylelint-config-twbs-bootstrap"
+  ],
+  "ignoreFiles": "node_modules/**/*", 
+  "rules": {
+    "declaration-property-value-disallowed-list": {
+      "border": "none",
+      "outline": "none"
+    },
+    "function-disallowed-list": [
+      "calc",
+      "lighten",
+      "darken"
+    ],
+    "property-disallowed-list": [
+      "border-radius",
+      "border-top-left-radius",
+      "border-top-right-radius",
+      "border-bottom-right-radius",
+      "border-bottom-left-radius",
+      "transition"
+    ],
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "declaration-block-trailing-semicolon": null,
+    "no-descending-specificity": null,
+    "selector-class-pattern": null,
+    "scss/dollar-variable-default": [ true, { "ignore": "local" }],
+    "scss/selector-no-union-class-name": true
+  }
+}

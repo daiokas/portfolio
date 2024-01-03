@@ -1,0 +1,9 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./base";
+@import "./text";
+@import "./fonts";
+@import 'animate.css';

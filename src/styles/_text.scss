@@ -1,0 +1,64 @@
+h1, h2, p, div, span {
+  @apply text-white;
+}
+
+h1 {
+  font-size: 54px;
+  margin: 0;
+  font-family: 'Coolvetica';
+  font-weight: 400;
+}
+
+h2 {
+  color: #8d8d8d;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'san-serif';
+  letter-spacing: 4px;
+  animation: fadeIn 1s 1.8s backwards;
+}
+
+input,
+textarea {
+  @apply text-white border rounded-lg text-lg block w-full outline-none mb-4 p-2;
+
+  &:focus {
+    @apply bg-white/10 border border-blue text-white;
+  }
+
+  &::placeholder {
+    @apply text-gray-400;
+  }
+}
+
+[type="submit"] {
+  &:hover {
+    @apply bg-blue text-white border-blue
+  }
+}
+
+.textAnimate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.textAnimateHover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: #00ddff;
+  }
+}
+
+@for $i from 1 through 35 {
+  .textAnimate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+}
